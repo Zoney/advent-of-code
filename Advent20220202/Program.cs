@@ -17,8 +17,6 @@ foreach (var line in read)
     var resultWanted = ResultWanted(me);
 
 
-    
-
     var henValue = ReturnValue(hen);
     var meCalcValue = WinnerCalc.CalcHand(henValue, resultWanted);
     var scorePoint = WinnerCalc.CalcWon(henValue, meCalcValue);
@@ -32,7 +30,7 @@ foreach (var line in read)
     total += basePoint;
     total += scorePoint;
 
-    
+
     ResultEnum ResultWanted(string s)
     {
         return s switch

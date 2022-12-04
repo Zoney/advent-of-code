@@ -1,8 +1,6 @@
-﻿using System.Security.AccessControl;
-
-var read = File.ReadLines(Directory.GetCurrentDirectory() + "/input.txt");
+﻿var read = File.ReadLines(Directory.GetCurrentDirectory() + "/input.txt");
 var readList = new List<List<string>>();
-int readCount = 0;
+var readCount = 0;
 var readInnerList = new List<string>();
 foreach (var line in read)
 {
@@ -15,6 +13,7 @@ foreach (var line in read)
         readInnerList = new List<string>();
     }
 }
+
 var total = 0;
 var commonChars = new List<string>();
 
@@ -27,18 +26,12 @@ foreach (var lineOf3 in readList)
     Console.WriteLine(part1);
     Console.WriteLine(part2);
     foreach (var charin1 in part1)
-    {
-        if (part2.Contains(charin1) && part3.Contains(charin1) && !commonCharsInLine.Contains(charin1.ToString())) 
+        if (part2.Contains(charin1) && part3.Contains(charin1) && !commonCharsInLine.Contains(charin1.ToString()))
             commonCharsInLine.Add(charin1.ToString());
-    }
     commonChars.AddRange(commonCharsInLine);
-    foreach (var line in lineOf3)
-    {
-        Console.WriteLine(line);
-        
-    }
-
+    foreach (var line in lineOf3) Console.WriteLine(line);
 }
+
 // foreach (var line in read)
 // {
 //     var commonCharsInLine = new List<string>();
@@ -59,18 +52,13 @@ foreach (var commonChar in commonChars)
 {
     // char c = 'A';
 //char c = 'b'; you may use lower case character.
-    int index = char.ToUpper(commonChar.ToCharArray()[0]) - 64;//index == 1
+    var index = char.ToUpper(commonChar.ToCharArray()[0]) - 64; //index == 1
     if (commonChar.ToUpper() == commonChar)
-    {
         sum += index + 26;
-
-    }
     else
-    {
         sum += index;
-        
-    }
     Console.WriteLine($"{commonChar} {index}");
 }
-commonChars.ForEach(x=> Console.WriteLine(x));
+
+commonChars.ForEach(x => Console.WriteLine(x));
 Console.WriteLine(sum);

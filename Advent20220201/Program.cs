@@ -17,7 +17,7 @@ foreach (var line in read)
     var scorePoint = CalcWon(henValue, meValue);
 
     total += basePoint;
-    total += scorePoint; 
+    total += scorePoint;
 
     int CalcWon(string one, string two, bool away = true)
     {
@@ -38,7 +38,7 @@ foreach (var line in read)
             return 0;
         if (one == "Paper" && two == "Scissors")
             return 6;
-        
+
         return 3;
     }
 
@@ -54,4 +54,3 @@ foreach (var line in read)
 }
 
 Console.WriteLine($"Total Points: {total}");
-

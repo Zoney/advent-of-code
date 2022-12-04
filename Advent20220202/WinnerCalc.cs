@@ -18,7 +18,7 @@ public static class WinnerCalc
             _ => 3,
         };
     }
-    
+
     public static HandEnum CalcHand(HandEnum one, ResultEnum result)
     {
         return one switch
@@ -34,10 +34,9 @@ public static class WinnerCalc
             HandEnum.Paper when result == ResultEnum.Draw => HandEnum.Paper,
         };
     }
-    
+
     public static int CalcWon(HandEnum one, HandEnum two)
     {
-        
         if (one == two)
             return 3;
 

@@ -1,0 +1,36 @@
+--- Day 0: Number Processing Adventure ---
+
+The elves at the North Pole need help processing some calibration numbers! They've given you a list of numbers, and they need you to help them with two important calculations.
+
+--- Part One ---
+
+The elves need to know the total power of all even numbers in their list. They believe even numbers have special magical properties that help their machines run more efficiently.
+
+For example, given these numbers:
+1
+2
+3
+4
+5
+
+The even numbers are 2 and 4, and their sum is 6.
+
+Your puzzle answer should be the sum of all even numbers in your input.
+
+--- Part Two ---
+
+Now that you've helped with the even numbers, the elves realize they need another calculation. They want to know the strength of all above-average numbers when multiplied together.
+
+Using the same example:
+1
+2
+3
+4
+5
+
+The mean (average) is 3. The numbers above the mean are 4 and 5.
+Multiplying these together: 4 * 5 = 20
+
+Your puzzle answer should be the product of all numbers that are greater than the mean of all numbers in your input.
+
+Both parts of this puzzle are complete! They provide two gold stars: ** 

@@ -1,0 +1,11 @@
+name: aoc2024
+channels:
+  - conda-forge
+  - defaults
+dependencies:
+  - python=3.13
+  - pip
+  - numpy
+  - pandas
+  - pip:
+    - -r requirements.txt 
